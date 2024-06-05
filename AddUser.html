@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add User</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="nav-top">
+        <img src="./assets/logo.png" alt="logo">
+        <div class="logo">Feedme.bet</div>
+    </div>
+
+    <div class="main_wrapper">
+        <div class="sidebar">
+            <ul>
+                <li>
+                    <a href="/" class="dashboard"><i class="bi bi-menu-up"></i>
+                        <p>Dashboard</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="Products.html" class="Products">
+                        <i class="bi bi-house-fill"></i>
+                        <p>Products</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="Records.html" class="Records">
+                        <i class="bi bi-card-checklist"></i>
+                        <p>Records</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="NewsFeed.html" class="NewsFeed">
+                        <i class="bi bi-newspaper"></i>
+                        <p>NewsFeed</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="/logout" class="dashboard">
+                        <i class="bi bi-box-arrow-left"></i>
+                        <p>Log Out</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+
+        <div class="right_container">
+            <div class="horizontal gap-20 padd">
+                <h3 class="top_head">User Name</h3>
+                <button class="btn_primary">Block</button>
+            </div>
+            <div class="halfwidth">
+                <form action="" class="vertical fullwidth gap-20">
+                    <div class="horizontal gap-10 fullwidth">
+                        <div class="vertical product_input gap-10 fullwidth">
+                            <label for="product-title">Email</label>
+                            <input type="text" name="product-title">
+                        </div>
+                    </div>
+                    <div class="horizontal gap-10 fullwidth">
+                        <div class="vertical product_input gap-10 fullwidth">
+                            <label for="Groups">Groups</label>
+                            <input type="text" name="Groups">
+                        </div>
+                        <div class="vertical product_input gap-10 fullwidth">
+                            <label for="Price">Price</label>
+                            <input type="text" name="Price">
+                        </div>
+                    </div>
+                    <div class="horizontal gap-10 fullwidth">
+                        <div class="vertical product_input gap-10 fullwidth">
+                            <label for="Package">Package</label>
+                            <input type="text" name="Package">
+                        </div>
+                        <div class="vertical product_input gap-10 fullwidth">
+                            <label for="JoinDate">Join Date</label>
+                            <input type="text" name="JoinDate">
+                        </div>
+                    </div>
+                    <div class="horizontal gap-10 fullwidth">
+                        <div class="vertical product_input gap-10 fullwidth">
+                            <label for="Subscription_date">Subscription Date</label>
+                            <input type="text" name="Subscription_date">
+                        </div>
+                        <div class="vertical product_input gap-10 fullwidth">
+                            <label for="Subscriptionendon">Subscription End On</label>
+                            <input type="text" name="Subscriptionendon">
+                        </div>
+                    </div>
+                    <div class="horizontal gap-10 fullwidth">
+                        <div class="vertical product_input gap-10 fullwidth">
+                            <label for="Password">Password</label>
+                            <input type="text" name="Password">
+                        </div>
+                        
+                    </div>
+                    <div class="horizontal gap-10">
+                        <div class="vertical product_input gap-10 fullwidth">
+                            <label for="Package">Group</label>
+                            <div class="horizontal_flex fullwidth space-between package-input">
+                                <p>Group</p>
+                                <i class="bi bi-trash3"></i>
+                            </div>
+                            <div class="horizontal_flex fullwidth space-between package-input">
+                                <p>Group</p>
+                                <i class="bi bi-trash3"></i>
+                            </div>
+                            <div class="horizontal_flex fullwidth space-between package-input">
+                                <p>Group</p>
+                                <i class="bi bi-trash3"></i>
+                            </div>
+                           
+                        </div>
+                        
+                    </div>
+                    <button class="btn_primary">Save</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

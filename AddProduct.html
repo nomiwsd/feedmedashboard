@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="dashboard.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="nav-top">
+        <img src="./assets/logo.png" alt="logo">
+        <div class="logo">Feedme.bet</div>
+    </div>
+
+    <div class="main_wrapper">
+        <div class="sidebar">
+            <ul>
+                <li>
+                    <a href="/" class="dashboard"><i class="bi bi-menu-up"></i>
+                        <p>Dashboard</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="Products.html" class="Products">
+                        <i class="bi bi-house-fill"></i>
+                        <p>Products</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="Records.html" class="Records">
+                        <i class="bi bi-card-checklist"></i>
+                        <p>Records</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="NewsFeed.html" class="NewsFeed">
+                        <i class="bi bi-newspaper"></i>
+                        <p>NewsFeed</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="/logout" class="dashboard">
+                        <i class="bi bi-box-arrow-left"></i>
+                        <p>Log Out</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="right_container">
+            <div class="horizontal fullwidth space-between padd">
+                <h3 class="top_head">Add Products</h3>
+                <button class="btn_primary">Save & Publish</button>
+            </div>
+            <div class="horizontal_div gap-20 fullwidth padd align-start">
+                <div class="fullwidth">
+                    <form action="" class="vertical fullwidth gap-20">
+
+                        <div class="horizontal gap-10 fullwidth">
+                            <div class="vertical product_input gap-10 fullwidth">
+                                <label for="product-title">Product Title</label>
+                                <input type="text" name="product-title">
+                            </div>
+                        </div>
+                        <div class="horizontal gap-10 fullwidth">
+                            <div class="vertical product_input gap-10 fullwidth">
+                                <label for="product-desc">Product Description</label>
+                                <textarea rows="5" name="product-desc"></textarea>
+                            </div>
+                        </div>
+                        <div class="horizontal gap-10 fullwidth">
+                            <div class="vertical product_input gap-10 fullwidth">
+                                <label for="Variations">Variations</label>
+                                <input type="text" name="Variations">
+                            </div>
+                        </div>
+                        <div class="horizontal gap-10 fullwidth">
+                            <div class="vertical product_input gap-10 fullwidth">
+                                <label for="Package">Package</label>
+                                <input type="text" name="Package">
+                            </div>
+                            <div class="vertical product_input gap-10 fullwidth">
+                                <label for="Price">Price</label>
+                                <input type="text" name="Price">
+                            </div>
+                        </div>
+                        <div class="horizontal gap-10">
+                            <div class="vertical product_input gap-10 fullwidth">
+                                <label for="Package">Packages</label>
+                                <div class="horizontal_flex fullwidth space-between package-input">
+                                    <p>Packages - Price</p>
+                                    <i class="bi bi-trash3"></i>
+                                </div>
+                                <div class="horizontal_flex fullwidth space-between package-input">
+                                    <p>Packages - Price</p>
+                                    <i class="bi bi-trash3"></i>
+                                </div>
+                                <div class="horizontal_flex fullwidth space-between package-input">
+                                    <p>Packages - Price</p>
+                                    <i class="bi bi-trash3"></i>
+                                </div>
+                                <div class="horizontal_flex fullwidth space-between package-input">
+                                    <p>Packages - Price</p>
+                                    <i class="bi bi-trash3"></i>
+                                </div>
+                            </div>
+                            <div class="vertical product_input gap-10 fullwidth">
+                                <label for="Package">Variations</label>
+                                <div class="horizontal_flex fullwidth space-between package-input">
+                                    <p>Variation</p>
+                                    <i class="bi bi-trash3"></i>
+                                </div>
+                                <div class="horizontal_flex fullwidth space-between package-input">
+                                    <p>Variation</p>
+                                    <i class="bi bi-trash3"></i>
+                                </div>
+                                <div class="horizontal_flex fullwidth space-between package-input">
+                                    <p>Variation</p>
+                                    <i class="bi bi-trash3"></i>
+                                </div>
+                                <div class="horizontal_flex fullwidth space-between package-input">
+                                    <p>Variation</p>
+                                    <i class="bi bi-trash3"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="fullwidth vertical align-start">
+                    <div class="vertical product_input gap-10 fullwidth fullheight">
+                        <label for="product-title">Images</label>
+                        <div class="image_upload vertical">
+                            <div class="horizontal_flex align-center gap-20">
+                                <p>Thumbnail</p>
+                                <label for="upload" class="file-input-label">Choose File</label>
+                                <input type="file" id="upload" class="file-input" accept="image/*">
+                            </div>
+                            <div class="vertical fullwidth align-center">
+                                <div class="below_image_upload" id="preview"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vertical product_input gap-10 fullwidth fullheight">
+                        <div class="image_upload vertical">
+                            <div class="horizontal_flex align-center gap-20">
+                                <p>Thumbnail</p>
+                                <label for="upload_multiple" class="file-input-label2">Choose File</label>
+                                <input type="file" id="upload_multiple" class="file-input2" accept="image/*" multiple>
+                            </div>
+                            <div id="grid-layout" class="grid-layout">
+                                <!-- Thumbnails will be dynamically added here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+    <script>  const uploadInput = document.getElementById('upload');
+        const preview = document.getElementById('preview');
+    
+        uploadInput.addEventListener('change', function () {
+            const file = this.files[0];
+            const reader = new FileReader();
+    
+            reader.onload = function (e) {
+                const imgContainer = document.createElement('div');
+                const img = document.createElement('img');
+                const closeIcon = document.createElement('span');
+    
+                img.src = e.target.result;
+                imgContainer.classList.add('uploaded-image-container');
+                img.classList.add('uploaded-image');
+                closeIcon.classList.add('close-icon');
+    
+                closeIcon.innerHTML = '&times;';
+                imgContainer.appendChild(img);
+                imgContainer.appendChild(closeIcon);
+                preview.appendChild(imgContainer);
+    
+                closeIcon.addEventListener('click', function () {
+                    imgContainer.remove();
+                });
+            };
+    
+            reader.readAsDataURL(file);
+        });
+    
+        document.getElementById('upload_multiple').addEventListener('change', function () {
+            const gridLayout = document.getElementById('grid-layout');
+    
+            const files = Array.from(this.files);
+            files.forEach(file => {
+                const reader = new FileReader();
+                reader.onload = function (event) {
+                    const thumbnail = document.createElement('div');
+                    const img = document.createElement('img');
+                    const closeIcon = document.createElement('span');
+    
+                    img.src = event.target.result;
+                    thumbnail.classList.add('thumbnail');
+                    closeIcon.classList.add('close-icon');
+    
+                    closeIcon.innerHTML = '&times;';
+                    thumbnail.appendChild(img);
+                    thumbnail.appendChild(closeIcon);
+                    gridLayout.appendChild(thumbnail);
+    
+                    closeIcon.addEventListener('click', function () {
+                        thumbnail.remove();
+                    });
+                };
+                reader.readAsDataURL(file);
+            });
+        });</script>
+    <!-- <script>
+          const uploadInput = document.getElementById('upload');
+    const preview = document.getElementById('preview');
+
+    uploadInput.addEventListener('change', function () {
+        const file = this.files[0];
+        const reader = new FileReader();
+
+        reader.onload = function (e) {
+            const img = document.createElement('img');
+            img.src = e.target.result;
+
+            img.onload = function () {
+                const width = img.width;
+                const height = img.height;
+
+                if (width > height) {
+                    img.style.width = '220px';
+                    img.style.height = '220px';
+                } else {
+                    img.style.width = '220px';
+                    img.style.height = '220px';
+                }
+
+                preview.innerHTML = '';
+                preview.appendChild(img);
+            };
+        };
+
+        reader.readAsDataURL(file);
+    });
+
+    document.getElementById('upload_multiple').addEventListener('change', function() {
+        const gridLayout = document.getElementById('grid-layout');
+        gridLayout.innerHTML = ''; // Clear previous thumbnails
+
+        const files = Array.from(this.files);
+        files.forEach(file => {
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                const thumbnail = document.createElement('div');
+                thumbnail.classList.add('thumbnail');
+                const img = document.createElement('img');
+                img.src = event.target.result;
+                thumbnail.appendChild(img);
+                gridLayout.appendChild(thumbnail);
+            }
+            reader.readAsDataURL(file);
+        });
+    });
+    </script> -->
+</body>
+
+</html>
